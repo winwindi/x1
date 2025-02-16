@@ -8,14 +8,14 @@ def load_model(model_name):
         model = pickle.load(open('models/Logistic Regression.pkl', 'rb'))
     elif model_name == 'SVM':
         model = pickle.load(open('models/SVM.pkl', 'rb'))
-    # elif model_name == 'Decission Tree':
-    #     model = pickle.load(open('models/decision_tree_model.pkl', 'rb'))
-    # elif model_name == 'Random Forest':
-    #     model = pickle.load(open('models/random_forest_model.pkl', 'rb'))
-    # elif model_name == 'XGB':
-    #     model = pickle.load(open('models/xgboost_model.pkl', 'rb'))
-    # elif model_name == 'GBM':
-    #     model = pickle.load(open('models/gradient_boosting_model.pkl', 'rb'))
+    elif model_name == 'Decission Tree':
+        model = pickle.load(open('models/Decision Tree.pkl', 'rb'))
+    elif model_name == 'Random Forest':
+        model = pickle.load(open('models/Random Forest.pkl', 'rb'))
+    elif model_name == 'XGB':
+        model = pickle.load(open('models/XGB.pkl', 'rb'))
+    elif model_name == 'GBM':
+        model = pickle.load(open('models/Gradient Boosting.pkl', 'rb'))
     return model
 
 # Fungsi untuk melakukan prediksi
@@ -50,7 +50,7 @@ def main():
 
     # Pemilihan model ML
     model_name = st.sidebar.selectbox("Pilih Model Machine Learning", ("Logistic Regression", "SVM"
-                                                                        # ,"Decission Tree", "Random Forest", "XGB", "GBM"
+                                                                        ,"Decission Tree", "Random Forest", "XGB", "GBM"
                                                                        ))
 
     # Upload File
